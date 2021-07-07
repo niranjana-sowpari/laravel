@@ -18,6 +18,8 @@ Route::get('/', function () { return view('welcome'); });
 /*Route::get('/test/{id}', function ($id) { 
 	echo $id;
 	return view('test'); });*/
+
+Route::get('/page/{id}', function ($id) { return view('page',array("id"=>$id)); });
  
 Route::view('/home','home');   // but in case of variables in the url
 // we can't use this way because we would neeed to call the functtion with that variable
